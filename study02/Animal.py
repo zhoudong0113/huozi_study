@@ -21,4 +21,5 @@ class Animal:
     def action(self,cry,run):
         self.cry = cry
         self.run = run
+        print(f'{self.name}'+f'{self.run}')
 

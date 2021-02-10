@@ -8,6 +8,7 @@ class Cat(Animal):
         super().__init__(name,colour,age,gender)
         self.Animal_hair = 'short_hair'
 
+# 定义方法捉老鼠
     def catch_mouse(self):
         print(f'{self.name}+会捉老鼠')
 
@@ -16,5 +17,6 @@ class Cat(Animal):
 
 
 if __name__ == '__main__':
-    a = Cat(name='喵喵',colour='black',age=6,gender='male','' )
+    a = Cat(name='喵喵',colour='black',age=6,gender='male')
     a.catch_mouse()
+    a.cry()
