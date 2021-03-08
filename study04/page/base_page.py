@@ -23,14 +23,16 @@ class BasePage:
             self.driver.get(self.base_url)
 
     #定义find方法
-    def find(self,locator,value):
+    def find(self,locator, value):
         return self.driver.find_element(locator,value)
 
     #定义finds方法
-    def finds(self,locator,value):
+    def finds(self,locator, value):
         return self.driver.find_elements(locator,value)
 
     #定义显示等待，等待元素可以点击
     def wait_for_click(self,timeout,locator):
         WebDriverWait(self.driver, timeout).until(expected_conditions.element_to_be_clickable(locator))
 
+    def quit(self):
+        self.driver.quit()
