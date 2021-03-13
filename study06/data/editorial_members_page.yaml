@@ -1,0 +1,10 @@
+editorial_members:
+
+ - action: find_click
+   locator: xpath
+   value: //*[@resource-id='com.tencent.wework:id/duq']
+
+ - action: find_click
+   locator: xpath
+   value: //*[@resource-id='com.tencent.wework:id/b_4']
+

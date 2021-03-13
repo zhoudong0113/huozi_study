@@ -1,0 +1,13 @@
+search:
+  - action: find_click
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/guu']
+
+  - action: send
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/fk1']
+    text: 测试01
+
+  - action: find_click
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/d2f']
