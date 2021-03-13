@@ -30,7 +30,7 @@ class AddMember(BasePage):
         sleep(2)
 
         # return GetMenberPage(self.driver)
-        return True
+        return self
 
     def get_member(self):
         # self.wait_for_click(5,(By.CSS_SELECTOR,".member_colRight_memberTable_th_Checkbox"))
