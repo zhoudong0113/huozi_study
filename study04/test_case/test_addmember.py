@@ -14,4 +14,5 @@ class TestDemo:
         acctid = "ceshi01261"
         phone = "13990909822"
 
+        #时而行，时而不行的，后面优化一下
         assert self.HomePage.goto_add_member().addmember(name,acctid,phone).get_member()
