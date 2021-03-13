@@ -1,0 +1,4 @@
+goto_address:
+  - action: find_click
+    locator: xpath
+    value: //*[@text='通讯录']

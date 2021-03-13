@@ -1,0 +1,29 @@
+add_manually:
+  - action: find_click
+    locator: xpath
+    value: //*[@text="手动输入添加"]
+
+
+add_members:
+  - action: send
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/au0']
+    text: 测试1000
+
+  - action: find_click
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/av2']
+
+  - action: find_click
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/b_0']
+
+
+  - action: send
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/eq7']
+    text: 15389817181
+
+  - action: find_click
+    locator: xpath
+    value: //*[@resource-id='com.tencent.wework:id/gur']
