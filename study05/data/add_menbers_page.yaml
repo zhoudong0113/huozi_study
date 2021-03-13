@@ -8,7 +8,7 @@ add_members:
   - action: send
     locator: xpath
     value: //*[@resource-id='com.tencent.wework:id/au0']
-    text: 测试1000
+    text: 测试1121
 
   - action: find_click
     locator: xpath
@@ -22,8 +22,13 @@ add_members:
   - action: send
     locator: xpath
     value: //*[@resource-id='com.tencent.wework:id/eq7']
-    text: 15389817181
+    text: 15389817182
 
   - action: find_click
     locator: xpath
     value: //*[@resource-id='com.tencent.wework:id/gur']
+
+  - action: find
+    locator: xpath
+    value: //*[@text="添加成功"]
+
