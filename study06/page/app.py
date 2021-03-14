@@ -1,6 +1,6 @@
 from appium import webdriver
 
-from study05.page.information_page import InformationPage
+from study06.page.information_page import InformationPage
 
 
 class App:

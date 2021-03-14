@@ -6,7 +6,7 @@ search:
   - action: send
     locator: xpath
     value: //*[@resource-id='com.tencent.wework:id/fk1']
-    text: 测试01
+    text: 测试1000
 
   - action: find_click
     locator: xpath
