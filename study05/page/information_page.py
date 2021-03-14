@@ -1,5 +1,5 @@
-from study06.page.address_page import Address
-from study06.page.base_page import BasePage
+from study05.page.address_page import Address
+from study05.page.base_page import BasePage
 
 
 class InformationPage(BasePage):
