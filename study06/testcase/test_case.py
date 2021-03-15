@@ -6,4 +6,5 @@ class TestMember:
         self.app = App()
 
     def test_delete_member(self):
-        self.app.goto_main().goto_address().search().goto_editorial_members().editorial_members()
+        assert self.app.goto_main().goto_address().search().goto_editorial_members().editorial_members()
+
