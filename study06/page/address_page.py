@@ -6,4 +6,3 @@ class Address(BasePage):
     def search(self):
         self.parse_action("../data/address_page.yaml","search")
         return PersonalInformation(self.driver)
-
