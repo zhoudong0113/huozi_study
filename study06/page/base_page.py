@@ -4,6 +4,9 @@ from appium.webdriver.webdriver import WebDriver
 from typing import List, Dict
 import json
 
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
 from study06.logger import Logs
 
 
@@ -19,6 +22,11 @@ class BasePage:
 
     def setup_implicitly_wait(self, timeout):
         self.driver.implicitly_wait(timeout)
+
+    def waits(self,time,locator):
+        locate = (MobileBy.XPATH,locator)
+        ele = WebDriverWait(self.driver,time).until(expected_conditions.element_to_be_clickable(locate))
+        return ele.find_click()
 
     def find(self, locator, value):
         # return self.driver.find_element(locator, value)
