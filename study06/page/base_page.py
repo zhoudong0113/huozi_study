@@ -5,7 +5,7 @@ from typing import List, Dict
 import json
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from study06.logger import log
+import logging
 
 
 class BasePage:
@@ -28,7 +28,7 @@ class BasePage:
 
     def find(self, locator, value):
         # return self.driver.find_element(locator, value)
-        log.info(f"find: locator={locator} , value = {value}")
+        logging.info(f"find: locator={locator} , value = {value}")
         try:
             # 没有异常情况下直接return继续运行下去
             element = self.driver.find_element(locator, value)
@@ -36,7 +36,7 @@ class BasePage:
             self.setup_implicitly_wait(10)
             return element
         except Exception as e:
-            log.error("未查到元素")
+            logging.error("未查到元素")
             # 处理黑名单逻辑
             self.setup_implicitly_wait(5)
             # 设置最大查找次数

@@ -4,5 +4,7 @@ from study06.page.personal_information_page import PersonalInformation
 
 class Address(BasePage):
     def search(self):
-        self.parse_action("../data/address_page.yaml","search")
+        ele = self.parse_action("../data/address_page.yaml","search")
+        print(ele)
         return PersonalInformation(self.driver)
+
