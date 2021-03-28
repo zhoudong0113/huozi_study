@@ -2,16 +2,18 @@ from Wechat.base.address import Address
 
 
 class TestAddress:
+    data = {
+        "userid": "zhd018",
+        "name": "zhd018",
+        "alias": "测试15",
+        "mobile": "102001232221",
+        "department": [1]
+    }
+
 
     def setup(self):
         self.address = Address()
-        self.data = {
-            "userid": "zhangsan4",
-            "name": "张三4",
-            "alias": "jackzhang4",
-            "mobile": "14200000004",
-            "department": [1]
-        }
+
 
     def teardown(self):
         self.address.delete_member(self.data["userid"])
@@ -24,6 +26,7 @@ class TestAddress:
         print(r)
         assert r.get("errmsg") == "created"
         r = self.address.get_member(self.data["userid"])
+        print(r)
         assert r.get("name") == self.data["name"]
 
     def test_crate(self):
@@ -37,7 +40,7 @@ class TestAddress:
         #更新成员
         self.address.create_member(self.data["userid"])
         self.address.get_member(self.data["userid"])
-        new_name = "李三"
+        new_name = "李三111"
         self.data["name"] = new_name
         r = self.address.update_member(self.data)
         assert r.get("errmsg") == "updated"
@@ -46,9 +49,12 @@ class TestAddress:
 
     def test_delete(self):
         #删除成员
-        self.address.create_member(self.data["userid"])
-        self.address.get_member(self.data["userid"])
+        s = self.address.create_member(self.data)
+        print(s)
+        z = self.address.get_member(self.data["userid"])
+        print(z)
         r = self.address.delete_member(self.data["userid"])
+        print(r)
         assert r.get("errmsg") == "deleted"
         r = self.address.create_member(self.data["userid"])
         assert r.get("errcode") == 60111

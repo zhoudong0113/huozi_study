@@ -26,6 +26,7 @@ class Base:
         r = self.session.get(url,params=params)
         print(r)
         token = r.json()["access_token"]
+        return token
 
     def send(self,url,method,*args,**kwargs):
         r = self.session.request(url=url, method=method,*args,**kwargs)

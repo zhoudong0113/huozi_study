@@ -9,9 +9,12 @@ class Address(Base):
         r = self.send(url,"post",json=data)
         return r.json()
 
-    def get_member(self,data):
+    def get_member(self,userid):
         #读取成员
         url = "https://qyapi.weixin.qq.com/cgi-bin/user/get"
+        data = {
+            "userid": userid
+        }
         r = self.send(url,"get",json=data)
         return r.json()
 
@@ -21,8 +24,11 @@ class Address(Base):
         r = self.send(url,"post",json=data)
         return r.json()
 
-    def delete_member(self,data):
+    def delete_member(self,userid):
         #删除成员
         url = 'https://qyapi.weixin.qq.com/cgi-bin/user/delete'
+        data = {
+            "userid": userid
+        }
         r = self.send(url,"get",json=data)
         return r.json()
