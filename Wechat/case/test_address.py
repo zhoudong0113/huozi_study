@@ -10,13 +10,11 @@ class TestAddress:
         "department": [1]
     }
 
-
     def setup(self):
         self.address = Address()
 
-
-    # def teardown(self):
-    #     self.address.delete_member(self.data["userid"])
+    def teardown(self):
+        self.address.delete_member(self.data["userid"])
 
     def test_create(self):
         # 数据处理,创建成员前确保没这个成员
