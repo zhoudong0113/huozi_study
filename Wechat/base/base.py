@@ -31,4 +31,3 @@ class Base:
     def send(self,url,method,*args,**kwargs):
         r = self.session.request(url=url, method=method,*args,**kwargs)
         return r
-

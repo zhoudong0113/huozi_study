@@ -15,7 +15,8 @@ class Address(Base):
         data = {
             "userid": userid
         }
-        r = self.send(url,"get",json=data)
+        # r = self.send(url, "get", json=data)
+        r = self.send(url,"get",params=data)
         return r.json()
 
     def update_member(self,data):
@@ -30,5 +31,6 @@ class Address(Base):
         data = {
             "userid": userid
         }
-        r = self.send(url,"get",json=data)
+        r = self.send(url,"get",params=data)
         return r.json()
+
