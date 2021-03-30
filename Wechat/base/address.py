@@ -15,7 +15,7 @@ class Address(Base):
         data = {
             "userid": userid
         }
-        # r = self.send(url, "get", json=data)
+        # r = self.send(url, "get", data=data)  这种不行，具体看get方法
         r = self.send(url,"get",params=data)
         return r.json()
 
@@ -31,6 +31,7 @@ class Address(Base):
         data = {
             "userid": userid
         }
+        # r = self.send(url, "get", data=data) 这种不行，具体看get方法
         r = self.send(url,"get",params=data)
         return r.json()
 
